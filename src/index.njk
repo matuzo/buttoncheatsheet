@@ -145,7 +145,7 @@ url: "https://www.buttoncheatsheet.com"
         <img src="button.png">
       {% endhighlight %}
 
-      <img width="303" src="assets/button.png" onclick="alert('Naaay! 🥸');" class="img-btn" alt="An image that looks like a button">
+      <img width="241" src="assets/button.png" onclick="alert('Naaay! 🥸');" class="img-btn" alt="An image that looks like a button">
 
       <h3>Details</h3>
 
@@ -181,16 +181,57 @@ url: "https://www.buttoncheatsheet.com"
       </ul>
     </li>
 
-    {# Placeholder link
-    <a onclick="#"></a> #}
+    <li class="sample">
+      <h2><i lang="de">Ned Fisch, ned Fleisch</i>*</h2>
 
-    {# Ned Fisch, ned Fleisch #}
-    {# <a role="button" tabindex="0">Sign up</a> #}
+      <p class="rating">Rating: Nope, don’t use it!</p>
 
-    {# The worst of two worlds
-    <a href="https://example.com">
-      <button>Example</button>
-    </a> #}
+      {% highlight "html" %}
+        <a role="button" tabindex="0">Yea or nay?</a>
+      {% endhighlight %}
+
+      <a onclick="alert('Naaay! 🐠');" role="button" tabindex="0" class="btn">Yea or nay?</a>
+
+      <h3>Details</h3>
+
+      <ul class="details">
+        <li>That’s a placeholder link, not a button</li>
+        <li>No key events by default</li>
+        <li>Shows wrong cursor on hover</li>
+      </ul>
+
+      <p>
+        <small>* Neither fish nor fowl in Viennese-German</small>
+      </p>
+    </li>
+
+
+    <li class="sample">
+      <h2>The worst of two worlds</h2>
+
+      <p class="rating">Rating: Please, just don’t do that!</p>
+
+      {% highlight "html" %}
+<button>
+  <a href="https://example.com">
+    Yea or Nay?
+  </a>
+</button>
+      {% endhighlight %}
+
+      <button onclick="alert('Naaay! 😭');" class="btn">
+        <a href="https://www.htmhell.dev">
+          Yea or nay?
+        </a>
+      </button>
+
+      <h3>Details</h3>
+
+      <ul class="details">
+        <li>Don’t nest interactive elements</li>
+        <li>If you need a link that looks like a button, style the link accordingly</li>
+      </ul>
+    </li>
     </ol>
     </main>
 
