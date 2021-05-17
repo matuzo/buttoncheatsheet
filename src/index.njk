@@ -37,12 +37,17 @@ url: "https://www.buttoncheatsheet.com"
   <header>
 
     <h1>{{ title }}</h1>
-    
-    <p>
-      Do you need a button for your next project but you’re not sure about the right markup?<br>
-      Don’t worry, <strong>The Button Cheat Sheet</strong>™️ has got you covered.
-    </p>
 
+    <div class="flow">
+      <p>
+        Do you need a button for your next project but you’re not sure about the right markup?<br>
+        Don’t worry, <strong>The Button Cheat Sheet</strong>™️ has got you covered.
+      </p>
+
+      <p class="smaller">
+        If you’re not sure wheather you should use a button or a link, watch <a href="https://www.youtube.com/watch?v=8XjwDq9zG4I&t=1s">The Links vs. Buttons Showdown</a> by <a href="https://marcysutton.com/">Marcy Sutton</a>.
+      </p>
+    </div>
   </header>
 
   <main>
@@ -74,7 +79,7 @@ url: "https://www.buttoncheatsheet.com"
     </li>
 
     <li class="sample">
-      <h2>A div</h2>
+      <h2>A div <a href="#footnote1" aria-label="Footnote 1">*</a></h2>
 
       <p class="rating">Rating: The worst, don’t use it! 🤮</p>
 
@@ -182,7 +187,7 @@ url: "https://www.buttoncheatsheet.com"
     </li>
 
     <li class="sample">
-      <h2><i lang="de">Ned Fisch, ned Fleisch</i>*</h2>
+      <h2><i lang="de">Ned Fisch, ned Fleisch</i><a href="#footnote2" aria-label="Footnote 2">**</a></h2>
 
       <p class="rating">Rating: Nope, don’t use it!</p>
 
@@ -199,10 +204,6 @@ url: "https://www.buttoncheatsheet.com"
         <li>No key events by default</li>
         <li>Shows wrong cursor on hover</li>
       </ul>
-
-      <p>
-        <small>* Neither fish nor fowl in Viennese-German</small>
-      </p>
     </li>
 
 
@@ -235,7 +236,12 @@ url: "https://www.buttoncheatsheet.com"
     </ol>
     </main>
 
-    <footer>
+    <footer class="flow">
+      <p>
+        <small id="footnote1">* Disclaimer: There might be edge cases in which a button element might not work for the custom control you’re building. In that case use a div, but make sure that your custom button is at least as accessible as a native button. If you’ve built a such a button, please <a href="mailto:manuel@matuzo.at">get in touch</a>, I’d love to see why and how.</small><br>
+        <small id="footnote2">** Neither fish nor fowl in Viennese-German</small>
+
+      </p>
       <p>
         built with <a href="https://www.11ty.dev/" rel="noopener">eleventy</a> and ❤️ in Vienna by <a href="https://twitter.com/mmatuzo" rel="noopener">@mmatuzo</a>
       <p>

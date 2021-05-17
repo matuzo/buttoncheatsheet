@@ -9,6 +9,7 @@
   --h2-size: 1.8rem;
   --h3-size: 1.6rem;
   --code-padding: 1rem;
+  --flow: 1rem;
 }
 
 .sheet {
@@ -31,6 +32,7 @@
     --h2-size: 2.8rem;
     --h3-size: 2rem;
     --code-padding: 2rem;
+    --flow: 2rem;
   }
 
   .sheet {
@@ -99,10 +101,7 @@ i {
   font-style: normal;
 }
 
-a:link {
-  color: #fff;
-}
-
+a:link,
 a:visited {
   color: #153a51;
 }
@@ -150,8 +149,16 @@ a:visited {
   padding: 0 0 var(--sheet-margin);
 }
 
+.flow > * + * {
+  margin-top: var(--flow);
+}
+
 .sample > * + * {
   margin-top: var(--sheet-spacing);
+}
+
+.smaller {
+  font-size: 0.9em;
 }
 
 .rating {
