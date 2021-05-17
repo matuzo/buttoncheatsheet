@@ -37,6 +37,12 @@
   }
 }
 
+@media (min-width: 1200px) {
+  :root {
+    --title-size: 8rem;
+  }
+}
+
 body {
   margin: 0;
   background: #ffd700;
@@ -67,6 +73,7 @@ h1 {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.2;
+  max-width: 12ch;
 }
 
 h2 {
