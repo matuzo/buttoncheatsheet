@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addPassthroughCopy("./src/assets");
-
+  eleventyConfig.addPassthroughCopy({ "./src/favicon": "/"});
   
   return {
     templateFormats: ["md", "njk"],
