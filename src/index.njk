@@ -1,0 +1,206 @@
+---
+title: The Button Cheat Sheet
+description: "Do you need a button for your next project but you’re not sure about the right markup? Don’t worry, we’ve got you covered!"
+---
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>{{ title }}</title>
+
+  <script type="module">
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <meta name="description" content="{{ description }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="https://www.mywebsite.com/image.jpg">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.mywebsite.com/page">
+  <link rel="canonical" href="https://www.mywebsite.com/page">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/my.webmanifest">
+  <meta name="theme-color" content="#ffd700">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+  <header>
+
+    <h1>{{ title }}</h1>
+    
+    <p>
+      Do you need a button for your next project but you’re not sure about the right markup?<br>
+      Don’t worry, <strong>The Button Cheat Sheet</strong>™️ has got you covered.
+    </p>
+
+  </header>
+
+  <main>
+
+  <ol class="sheet">
+    <li class="sample">
+      <h2>The HTML5 &lt;button&gt;</h2>
+  
+      <p class="rating rating--good">
+        Rating: Good, use it! 🥳
+      </p>
+    
+      {% highlight "html" %}
+        <button onclick="alert(msg);">Yea or nay?</button>
+      {% endhighlight %}
+
+      <button class="btn" onclick="alert('Yaaay! 🎉');">Yea or nay?</button>
+
+      <h3>Details</h3>
+
+      <ul class="details">
+        <li>That’s a proper button!</li>
+        <li>It’s focusable</li>
+        <li>It has correct key events by default</li>
+        <li>Correct <code>button</code> role</li>
+        <li>All in all beautiful! ❤️  </li>
+      </ul>
+
+    </li>
+
+    <li class="sample">
+      <h2>A div</h2>
+
+      <p class="rating">Rating: The worst, don’t use it! 🤮</p>
+
+      {% highlight "html" %}
+        <div onclick="alert(msg);">Yea or nay?</div>
+      {% endhighlight %}
+
+      <div class="btn" onclick="alert('Naaay! 🤮');">Yea or nay?</div>
+
+      <h3>Details</h3>
+
+      <ul class="details">
+        <li>That’s not a button!</li>
+        <li>Not keyboard focusable</li>
+        <li>No key events by default</li>
+        <li>No semantic <code>button</code> role</li>
+        <li>Shows wrong cursor on hover</li>
+      </ul>
+    </li>
+
+    <li class="sample">
+      <h2>A focusable div</h2>
+
+      <p class="rating">Rating: Really bad, don’t use it!</p>
+
+      {% highlight "html" %}
+        <div tabindex="0" onclick="alert(msg);">Yea or nay?</div>
+      {% endhighlight %}
+
+      <div class="btn" tabindex="0" onclick="alert('Naaay! ☹️');">Yea or nay?</div>
+
+      <h3>Details</h3>
+
+      <ul class="details">
+        <li>That’s not a button</li>
+        <li>No key events by default</li>
+        <li>No semantic <code>button</code> role</li>
+        <li>Shows wrong cursor on hover</li>
+      </ul>
+    </li>
+    
+    <li class="sample">
+      <h2>A focusable div with a button role</h2>
+
+      <p class="rating">Rating: Bad, don’t use it!</p>
+
+      {% highlight "html" %}
+        <div tabindex="0" role="button" onclick="alert(msg);">Yea or nay?</div>
+      {% endhighlight %}
+
+      <div class="btn" tabindex="0" role="button" onclick="alert('Naaay! 😫');">Yea or nay?</div>
+
+      <h3>Details</h3>
+
+      <ul class="details">
+        <li>It feels like a button, but it’s still not a proper button</li>
+        <li>No key events by default</li>
+        <li>Shows wrong cursor on hover</li>
+      </ul>
+    </li>
+    
+    <li class="sample">
+      <h2>An image</h2>
+
+      <p class="rating">Rating: Hell no, don’t use it!</p>
+
+      {% highlight "html" %}
+        <img src="button.png" onclick="alert(msg);">
+      {% endhighlight %}
+
+      <img width="303" src="assets/button.png" onclick="alert('Naaay! 🥸');" class="img-btn">
+
+      <h3>Details</h3>
+
+      <ul class="details">
+        <li>That’s an image, not a button</li>
+        <li>Not keyboard focusable</li>
+        <li>No key events by default</li>
+        <li><code>image</code> instead of <code>button</code> role</li>
+        <li>No accessible name</li>
+      </ul>
+
+    </li>
+
+    <li class="sample">
+      <h2>A  placeholder link</h2>
+
+      <p class="rating">Rating: Hmm...no, don’t use it!</p>
+
+      {% highlight "html" %}
+        <a onclick="alert(msg);">Yea or nay?</a>
+      {% endhighlight %}
+
+      <a onclick="alert('Naaay! 😐');" class="btn">Yea or nay?</a>
+
+      <h3>Details</h3>
+
+      <ul class="details">
+        <li>That’s a placeholder link, not a button</li>
+        <li>Not keyboard focusable</li>
+        <li>No key events by default</li>
+        <li><code>link</code> instead of <code>button</code> role</li>
+        <li>Shows wrong cursor on hover</li>
+      </ul>
+    </li>
+
+    {# Placeholder link
+    <a onclick="#"></a> #}
+
+    {# Ned Fisch, ned Fleisch #}
+    {# <a role="button" tabindex="0">Sign up</a> #}
+
+    {# The worst of two worlds
+    <a href="https://example.com">
+      <button>Example</button>
+    </a> #}
+    </main>
+
+    <footer>built with <a href="https://www.11ty.dev/" rel="noopener">eleventy</a> and ❤️ in Vienna by <a href="https://twitter.com/mmatuzo" rel="noopener">@mmatuzo</a></footer>
+    
+    
+</body>
+</html>
+</ol>
