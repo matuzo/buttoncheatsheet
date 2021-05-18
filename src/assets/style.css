@@ -10,10 +10,10 @@
   --h3-size: 1.6rem;
   --code-padding: 1rem;
   --flow: 1rem;
+  --block-spacing: 2rem;
 }
 
 .sheet {
-  --sheet-margin: 2rem;
   --sheet-spacing: 1rem;
 }
 
@@ -33,10 +33,10 @@
     --h3-size: 2rem;
     --code-padding: 2rem;
     --flow: 2rem;
+    --block-spacing: 4rem;
   }
 
   .sheet {
-    --sheet-margin: 4rem;
     --sheet-spacing: 2rem;
   }
 }
@@ -106,6 +106,10 @@ a:visited {
   color: #153a51;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .btn {
   appearance: none;
   background: #36b1bf;
@@ -136,17 +140,18 @@ a:visited {
 
 .sheet {
   padding: 0;
-  margin: var(--sheet-margin) 0 0;
+  margin: var(--block-spacing) 0 0;
   list-style: none;
 }
 
+main > * + *,
 .sheet > * + * {
-  margin-top: var(--sheet-margin);
+  margin-top: var(--block-spacing);
 }
 
 .sample:not(:last-child) {
   border-bottom: 0.3rem dashed rgba(21, 58, 81, 0.4);
-  padding: 0 0 var(--sheet-margin);
+  padding: 0 0 var(--block-spacing);
 }
 
 .flow > * + * {
