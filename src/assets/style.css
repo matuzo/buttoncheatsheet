@@ -183,6 +183,11 @@ main > * + *,
   border: 3px solid #196619;
 }
 
+.rating--soso {
+  background: #887117;
+  border: 3px solid #6a5812;
+}
+
 .details {
   margin-top: 1rem;
 }
